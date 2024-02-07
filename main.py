@@ -9,7 +9,7 @@ class Programma:
         self.modulis = Modulis(self.fails)
         
         self.produkti = self.modulis.iegut_nosaukumus()
-        self.virsraksts = Label(window, text = "Izvēlies savu maltīti")
+        self.virsraksts = Label(window, text = "Izvēlies savu maltīti pirms sporta stundas")
         self.virsraksts.pack()
 
         self.produkta_izvele1 = ttk.Combobox(window, values=self.produkti)
@@ -29,7 +29,7 @@ class Programma:
             tauki_summa = produkts1[2]+produkts2[2]+produkts3[2]
             oglhidrati_summa = produkts1[3]+produkts2[3]+produkts3[3]
             energetiska_summa = produkts1[4]+produkts2[4]+produkts3[4]
-            self.rezultats['text']=f"Jūsu izvēlētajā maltītē ir \n {proteini_summa} proteīni \n {tauki_summa} tauki \n {oglhidrati_summa} ogļhidrāti \n {energetiska_summa} enerģētiskā vērtība"
+            self.rezultats['text']=f"Jūsu izvēlētajā maltītē ir \n {proteini_summa} g proteīna \n {tauki_summa} g tauku \n {oglhidrati_summa} g ogļhidrātu \n {energetiska_summa} kJ \n (Pamatojoties uz uz 100 g konkrēta produkta)"
 
         def parbaudit():
             self.produkts1 = self.produkta_izvele1.get()
